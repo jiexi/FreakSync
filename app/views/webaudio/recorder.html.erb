@@ -1,0 +1,44 @@
+<% content_for :title do %> Demo <% end %>
+
+<!-- need these to pass to coffeescript -->
+<%= hidden_field_tag "fftSize", @fftSize, { :id => "fftSize" } %>
+<%= hidden_field_tag "syncFreq", @syncFreq, { :id => "syncFreq" } %>
+    <div class="container">
+
+
+        <div class="row">
+
+            <div class="col-lg-12">
+<div id="viz">
+
+
+  <!--
+    <label for="comboWaveType">Wave Type:</label>
+    <select id="comboWaveType">
+        <option value="0" selected>Sine</option>
+        <option value="1" >Square</option>
+        <option value="2" >Sawtooth</option>
+        <option value="3" >Triangle</option>
+    </select>
+  -->
+  <br><br>
+  <div id="center" style="font-size:120px;">Press Spacebar</div>
+</div>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- /.container -->
+
+
+<div id="footer">
+<!--fftSize = <%= @fftSize %>   syncFreq = <%= @syncFreq %>-->
+  <div style="float:left;"><span>Status: <p id="status" style="display: inline-block;margin:0 0 5px 0;"></p><br>Loop #: <p id="count" style="display: inline-block;margin:0 0 5px 0;"></p><br><b>Turn volume to half-max and keep devices together!</b></span></div>
+ 
+  <div style="float:right; margin-right:40px;">  
+  <button id="btnSync">Sync</button>
+  <button id="btnReset">Reset</button>
+  </div>
+
+</div>

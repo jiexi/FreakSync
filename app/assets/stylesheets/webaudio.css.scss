@@ -1,0 +1,42 @@
+// Place all the styles related to the webaudio controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+html { overflow: hidden; }
+body { 
+  font: 14pt Arial, sans-serif; 
+  background: #bdc3c7;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 0;
+}
+
+#viz {
+  margin-top: 150px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#footer {
+   position:fixed;
+   font-size:12px;
+font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+   left:0px;
+   bottom:0px;
+   height:60px;
+   width:100%;
+   margin-left:20px;
+   margin-right:20px;
+   margin-bottom:10px;
+}
+
+
+
+.prettyprinted {
+  font-size:10px;
+
+}

@@ -1,0 +1,51 @@
+<% content_for :title do %>API<% end %>
+    
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-lg-12">
+                <h1 class="page-header">API
+                    <small>how to use FreakSync</small>
+                </h1>
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col-lg-12">
+                <p><code class="prettyprint">&lt;script src="freaksync.js">&lt;/script><br><br>
+                //all fields are optional, below are the defaults (recommended)<br>
+                //FreakSync(fftSize = 256, syncFreq = 16000, heartBeat = 250, resolution = 5, heartBeatMult = 2)<br>
+                //fftSize must be a non zero power of 2 that is <= 2048. Higher gives more accurate frequency reads.<br>
+                //syncFreq is the frequency devices will listen and signal on<br>
+                //heartBeat specifies how often during sync we will signal<br>
+                //resolution is how much we jump if we receive a signal (accuracy)<br>
+                //heartBeatMult multiply heartBeat is how often we will call your callback function<br><br> 
+
+                //setup: create a FreakSync object<br>
+                freaksync = new FreakSync();<br><br>
+
+                //done: sync(callback) starts syncronization and will callback when done<br>
+                freaksync.sync(function(time_since_sync){<br>
+                  //called every heartBeat * heartBeatMult<br>
+                  console.log(time_since_sync)<br>
+                });<br><br>
+
+
+                //oops: reset() allows you stop a sync at anypoint including heartbeat callbacks<br>
+                freaksync.reset();<br><br>
+
+                console.log("that's it! seriously, it's that simple :^D")<br>
+                //note: be sure to run this at half volume and keep devices near each other during sync<br>
+                //after they are synced, you can move them as far apart as you want and they'll remain synced.<br><br>
+
+                </code></p>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- /.container -->
