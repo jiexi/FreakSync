@@ -3,7 +3,7 @@ class WebaudioController < ApplicationController
     params.permit(:syncFreq,:fftSize)
     
     @syncFreq = params["syncFreq"].to_i unless params["syncFreq"].nil?
-    @syncFreq ||= 16000
+    @syncFreq ||= 18000
 
     @fftSize = params["fftSize"].to_i unless params["fftSize"].nil?
     @fftSize ||= 256
