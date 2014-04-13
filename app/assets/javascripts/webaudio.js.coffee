@@ -21,7 +21,7 @@ class FreakSync
 
     @freqPrev = 0
 
-    @freqThreshold = 50 #typical spike is 100, consider it a spike if it goes past this
+    @freqThreshold = 80 #typical spike is 100, consider it a spike if it goes past this
 
     #assuming samplerate of 44100
     @sampleRate = 44100
