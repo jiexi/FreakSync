@@ -267,7 +267,7 @@ class FreakSync
           $("#status").text("Announcing ourselves once, signalling out!")
           @playedEntrance = true
           @playFreq()
-        if @clear >= 15
+        if @clear >= 19
           $("#status").text("Clock is synced! HeartBeat counter shown above :)")
           @tick_count = 0
           d = new Date()
