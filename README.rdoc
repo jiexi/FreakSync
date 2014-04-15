@@ -1,28 +1,40 @@
-== README
+== FreakSync
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+FreakSync is an Web Audio based time synchronization Javascript library.
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+== What does that even mean?
+
+Well, it's written in Javascript and uses the Web Audio API found in modern browsers; this means it works on all devices that have Chrome and Firefox like your laptop and cellphone! It synchronizes your devices via high frequency sounds to the same precise "heartbeats". This allows you to perform synchronized actions across multiple devices by only specifying a "heartbeat count" in the future.
+
+== What?..
+It makes your laptops talk by sound to sync up a timer that increases by 1 during at every heartbeat that you specify in milliseconds among other parameters (al optional). This allows for synchronized group actions. Do stuff at the same time or at an exact "k * heartbeat" time since synchronization.
+
+== How?..
+FreakSync uses your microphone, speakers, and the firefly algorithm. What is the firefly algorithm? It's how fireflies sync their lights on their butts to flash at the same time. No, they don't use an NTP server to sync up, and neither should you.
+
+== Why not use network?
+You're not always connected by LAN. Sometimes your network is congested, packets get delayed. This avoids congestion over network by localizing the synchronization between the devices. Yes, the sync process can be initiated by a remote server, and the clients will handle the rest locally. 
+
+Sometimes you go outside where there is no network. HAHA jk. But seriously, this sync works regardless of if you're on the same network or any network at all. Local means fast and accurate syncs.
+
+== You forgot wifi.
+We want precision synchronizations. Wifi is not going to give you that regardless of if your network is congested or not.
+
+== How is this useful?
+Ever try playing the same song at the same time across multiple devices? "Ready guys? 3 2 1 PLAY! Crap, somebody is off again?.." Sound familiar? Never again with FreakSync.
+
+Want to create a jumbotron from an array of laptop screens? Just have them all check in to a remote server so that the server knows what pixel of the jumbo tron they are and have a synchronized light show.
+
+== What else?
+I don't know. I'm going back to my lab report now. You're smart (probably). Think of something cool and do it!
+
+== Disclaimer
+Messy messy messy messy hacked together sometimes buggy code. This is what I did in 36 hours by myself for LAHacks. Something something use it however you wish. Something feel free to contribute and pull request. Something thank you for your time! Really, thank you! I must get back to that lab report now ;(. So sad.
+
+
+
+
+
+
+ 
